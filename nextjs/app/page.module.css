@@ -1,0 +1,55 @@
+.orange {
+    height: 30px;
+    background-color: #d87d82;
+    width: 100%;
+}
+
+.pink {    
+    background-color: #f6a8c5;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.paleyellow1 {
+    background-color:#fff8ea ;
+    height: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.paleyellow2 {
+        width: 100%;
+        background-color:#fff8ea ;
+        height: 30px;
+        display: flex;
+        list-style-type: none;
+        font-weight: bold;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0%;
+        width: 100%;
+}
+
+.pink .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+@media (min-width: 600px) {
+    .pink, .palepink, .offwhite, .pink2 {
+        padding: 40px;
+        min-height: auto;
+        text-align: center;
+    }
+}
+
+.pink, .palepink, .offwhite, .pink2 {
+    padding: 40px;
+    min-height: auto;
+    text-align: center;
+  }

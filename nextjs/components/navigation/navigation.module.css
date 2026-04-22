@@ -1,0 +1,13 @@
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background-color:#fff8ea ;
+        height: 30px;
+        text-align: center;
+    color: chocolate;
+    
+}

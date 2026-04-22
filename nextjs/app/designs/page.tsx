@@ -6,16 +6,14 @@ export default function Home() {
   return (
     <>
     <div className={styles.orange}></div>
-    <Nav />
+        <Nav />
   
-
+<h1>Designs!  </h1>
+<p>These are my finished designs</p>
     <div className={styles.pink}>
         <div className={styles.column}>
-            <h1>Portfolio of Art and Design </h1>by Avery Findley
+            
                 
-            <div>
-                <img src="./images/Hehehe 2026-02-02 at 11.11.32 AM.png" alt="" />
-            </div>
         </div>
         
     </div>
