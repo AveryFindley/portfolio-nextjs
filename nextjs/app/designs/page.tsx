@@ -2,22 +2,64 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Nav from "@/components/navigation";
 
-export default function Home() {
+import Link from "next/link"
+import {moodboards, posters, logos} from "@/app/data/projects"
+
+export default function ProjectsPage() {
   return (
-    <>
-    <div className={styles.orange}></div>
-        <Nav />
+
   
-<h1>Designs!  </h1>
-<p>These are my finished designs</p>
-    <div className={styles.pink}>
-        <div className={styles.column}>
-            
-                
-        </div>
-        
-    </div>
-  <div className={styles.paleyellow1}> Portfolio last updated: January 28, 2026</div>
-           </>
-  );
+     
+    <main>
+
+
+      <Nav />
+
+
+  
+
+      <h2 className={styles.h2}>Moodboards</h2>
+      <div className={styles.projects}>
+        {moodboards.map((project) => (
+          <Link key={project.slug} className={styles.project} href={`/designs/${project.slug}`}>
+            <article>
+              <div className={styles.projectImage}>
+                <Image src={project.url} alt={project.title} fill />
+              </div>
+              <h2>{project.title}</h2>
+            </article>
+          </Link>
+        ))}
+      </div>
+      
+      <h2 className={styles.h2}>Posters</h2>
+      <div className={styles.projects}>
+        {posters.map((project) => (
+          <Link key={project.slug} className={styles.project} href={`/designs/${project.slug}`}>
+            <article>
+              <div className={styles.projectImage}>
+                <Image src={project.url} alt={project.title} fill />
+              </div>
+              <h2>{project.title}</h2>
+            </article>
+          </Link>
+        ))}
+      </div>
+
+      <h2 className={styles.h2}>Logos</h2>
+      <div className={styles.projects}>
+        {logos.map((project) => (
+          <Link key={project.slug} className={styles.project} href={`/designs/${project.slug}`}>
+            <article>
+              <div className={styles.projectImage}>
+                <Image src={project.url} alt={project.title} fill />
+              </div>
+              <h2>{project.title}</h2>
+            </article>
+          </Link>
+        ))}
+      </div>
+
+    </main>
+  )
 }
